@@ -96,6 +96,14 @@ public class CalendarStuff {
    *         be decremented to make the appropriate index value
    */
    public static long daysInMonth( long month, long year ) {
+      if (isLeapYear(year)) {
+        if (month-1 == FEBRUARY) {
+          return 29;
+        }
+        return daynumber[(int)month-1];
+      }
+      
+      return daynumber[(int)month-1];
       
    }
 
@@ -110,7 +118,18 @@ public class CalendarStuff {
    * @return          boolean which is true if the two dates are exactly the same
    */
    public static boolean dateEquals( long month1, long day1, long year1, long month2, long day2, long year2 ) {
-      return true;  // replace this with the actual code
+      if (year1 != year2) {
+        return false;
+      }
+      else if (month1 != month2) {
+        return false;
+      }
+      else if (day1 != day2) {
+        return false;
+      }
+      else {
+        return true;
+      }
    }
 
   /**
@@ -124,7 +143,7 @@ public class CalendarStuff {
    * @return          int    -1/0/+1 if first date is less than/equal to/greater than second
    */
    public static int compareDate( long month1, long day1, long year1, long month2, long day2, long year2 ) {
-      return 0;  // replace this with the actual code
+      
    }
 
   /**
