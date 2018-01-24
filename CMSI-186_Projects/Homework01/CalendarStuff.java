@@ -143,7 +143,27 @@ public class CalendarStuff {
    * @return          int    -1/0/+1 if first date is less than/equal to/greater than second
    */
    public static int compareDate( long month1, long day1, long year1, long month2, long day2, long year2 ) {
-      
+      if (dateEquals(month1, day1, year1, month2, day2, year2)) {
+        return 0;
+      }
+      else if (year1 < year2) {
+        return -1;
+      }
+      else if (year1 == year2) {
+        if (month1 < month2) {
+          return -1;
+        }
+        else if (month1 == month2) {
+          if (day1 < day2) {
+            return -1;
+          }
+          return 1;
+        }
+        return 1;
+      }
+      else {
+        return 1;
+      }
    }
 
   /**
