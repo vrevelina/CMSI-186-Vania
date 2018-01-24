@@ -3,8 +3,8 @@
  *  Purpose       :  Provides a class with supporting methods for CountTheDays.java program
  *  Author        :  B.J. Johnson (prototype)
  *  Date          :  2017-01-02 (prototype)
- *  Author        :  <your name here>
- *  Date          :  <date of writing here>
+ *  Author        :  <Vania Revelina>
+ *  Date          :  <2018-01-18>
  *  Description   :  This file provides the supporting methods for the CountTheDays program which will
  *                   calculate the number of days between two dates.  It shows the use of modularization
  *                   when writing Java code, and how the Java compiler can "figure things out" on its
@@ -22,33 +22,46 @@
  *  @version 1.0.0  2017-01-02  B.J. Johnson  Initial writing and release
  *  @version 1.0.1  2017-12-25  B.J. Johnson  Updated for Spring 2018
  */
-public class CalendarStuffEmpty {
+public class CalendarStuff {
 
   /**
    * A listing of the days of the week, assigning numbers; Note that the week arbitrarily starts on Sunday
    */
    private static final int SUNDAY    = 0;
    private static final int MONDAY    = SUNDAY    + 1;
-  // you can finish the rest on your own
+   private static final int TUESDAY   = MONDAY    + 1;
+   private static final int WEDNESDAY = TUESDAY   + 1;
+   private static final int THURSDAY  = WEDNESDAY + 1;
+   private static final int FRIDAY    = THURSDAY  + 1;
+   private static final int SATURDAY  = FRIDAY    + 1;
   
   /**
    * A listing of the months of the year, assigning numbers; I suppose these could be ENUMs instead, but whatever
    */
    private static final int JANUARY    = 0;
    private static final int FEBRUARY   = JANUARY   + 1;
-  // you can finish these on your own, too
+   private static final int MARCH      = FEBRUARY  + 1;
+   private static final int APRIL      = MARCH     + 1;
+   private static final int MAY        = APRIL     + 1;
+   private static final int JUNE       = MAY       + 1;
+   private static final int JULY       = JUNE      + 1;
+   private static final int AUGUST     = JULY      + 1;
+   private static final int SEPTEMBER  = AUGUST    + 1;
+   private static final int OCTOBER    = SEPTEMBER + 1;
+   private static final int NOVEMBER   = OCTOBER   + 1;
+   private static final int DECEMBER   = NOVEMBER  + 1;
   
   /**
    * An array containing the number of days in each month
    *  NOTE: this excludes leap years, so those will be handled as special cases
    *  NOTE: this is optional, but suggested
    */
-   private static int[]    days        = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+   private static int[] daynumber = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
   /**
    * The constructor for the class
    */
-   public CalendarStuffEmpty() {
+   public CalendarStuff() {
       System.out.println( "Constructor called..." );  // replace this with the actual code
    }
 
@@ -59,8 +72,20 @@ public class CalendarStuffEmpty {
    * @return         boolean which is true if the parameter is a leap year
    */
    public static boolean isLeapYear( long year ) {
-      return true;  // replace this with the actual code
-   }
+      if (year % 4 != 0) {
+        return false;
+      }
+      else if (year % 400 == 0) {
+        return true;
+      }
+      else if (year % 100 == 0) {
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+
 
   /**
    * A method to calculate the days in a month, including leap years
@@ -71,7 +96,7 @@ public class CalendarStuffEmpty {
    *         be decremented to make the appropriate index value
    */
    public static long daysInMonth( long month, long year ) {
-      return 33;  // replace this with the actual code
+      
    }
 
   /**
