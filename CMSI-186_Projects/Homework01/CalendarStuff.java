@@ -186,7 +186,10 @@ public class CalendarStuff {
           }
         }
         else if ((int)month-1 <= 11) {
-          if ((int)day <= daynumber[(int)month-1]) {
+          if ((int)day==0) {
+            return false;
+          }
+          else if ((int)day <= daynumber[(int)month-1]) {
             return true;
           }
         }
@@ -194,7 +197,10 @@ public class CalendarStuff {
       }
       else {
         if ((int)month-1 <= 11) {
-          if ((int)day <= daynumber[(int)month-1]) {
+          if ((int)day==0) {
+            return false;
+          }
+          else if ((int)day <= daynumber[(int)month-1]) {
             return true;
           }
         }
