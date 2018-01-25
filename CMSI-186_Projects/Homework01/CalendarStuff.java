@@ -176,7 +176,30 @@ public class CalendarStuff {
    *         be decremented to make the appropriate index value
    */
    public static boolean isValidDate( long month, long day, long year ) {
-      return true;  // replace this with the actual code
+      if (isLeapYear(year)) {
+        if ((int)month-1 == 1) {
+          if ((int)day <= 29) {
+            return true;
+          }
+          else {
+            return false;
+          }
+        }
+        else if ((int)month-1 <= 11) {
+          if ((int)day <= daynumber[(int)month-1]) {
+            return true;
+          }
+        }
+        return false;
+      }
+      else {
+        if ((int)month-1 <= 11) {
+          if ((int)day <= daynumber[(int)month-1]) {
+            return true;
+          }
+        }
+        return false;
+      }
    }
 
   /**
@@ -186,8 +209,34 @@ public class CalendarStuff {
    */
    public static String toMonthString( int month ) {
       switch( month - 1 ) {
-         default: throw new IllegalArgumentException( "Illegal month value given to 'toMonthString()'." );
+        case 0: System.out.println("January");
+        break;
+        case 1: System.out.println("February");
+        break;
+        case 2: System.out.println("March");
+        break;
+        case 3: System.out.println("April");
+        break;
+        case 4: System.out.println("May");
+        break;
+        case 5: System.out.println("June");
+        break;
+        case 6: System.out.println("July");
+        break;
+        case 7: System.out.println("August");
+        break;
+        case 8: System.out.println("September");
+        break;
+        case 9: System.out.println("October");
+        break;
+        case 10: System.out.println("November");
+        break;
+        case 11: System.out.println("December");
+        break;        
+        default: 
+        throw new IllegalArgumentException( "Illegal month value given to 'toMonthString()'." );
       }
+      throw new IllegalArgumentException("Illegal month value given to 'toMonthString()'.");
    }
 
   /**
@@ -197,8 +246,23 @@ public class CalendarStuff {
    */
    public static String toDayOfWeekString( int day ) {
       switch( day - 1 ) {
-         default       : throw new IllegalArgumentException( "Illegal day value given to 'toDayOfWeekString()'." );
+        case 0: System.out.println("Sunday");
+        break;
+        case 1: System.out.println("Monday");
+        break;
+        case 2: System.out.println("Tuesday");
+        break;
+        case 3: System.out.println("Wednesday");
+        break;
+        case 4: System.out.println("Thursday");
+        break;
+        case 5: System.out.println("Friday");
+        break;
+        case 6: System.out.println("Saturday");
+        break;
+        default: throw new IllegalArgumentException( "Illegal day value given to 'toDayOfWeekString()'." );
       }
+      throw new IllegalArgumentException( "Illegal day value given to 'toDayOfWeekString()'." );
    }
 
   /**
