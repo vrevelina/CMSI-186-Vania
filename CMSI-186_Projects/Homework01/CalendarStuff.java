@@ -283,80 +283,72 @@ public class CalendarStuff {
    */
    public static long daysBetween( long month1, long day1, long year1, long month2, long day2, long year2 ) {
       long dayCount = 0;
-      int firstmonth = (int)month1;
-      int secondmonth = (int)month2;
-      int firstyear = (int)year1;
-      int secondyear = (int)year2;
       if (compareDate(month1, day1, year1, month2, day2, year2)==-1) {
-        if (year1==year2) {
+        dayCount = ((int)year2 - (int)year1 - 1) * 365;
+        if ((int)year1<(int)year2) {
+          for (int i = (int)month1; i<12; i++) {
+            dayCount = dayCount + daysInMonth(i, year1);
+          }
+          for (int j = 0; j<(int)month2-2; j++) {
+            dayCount = dayCount + daysInMonth(j, year2);
+          }
+          while ((int)year1<(int)year2) {
+            if (isLeapYear(year1)) {
+              dayCount += 1;
+            }
+            year1++;
+          }
+          dayCount += daynumber[(int)month1-1] - (int)day1;
+          dayCount += day2;
+        }
+        else if ((int)year1==(int)year2) {
           if (month1==month2) {
             dayCount = (int)day2 - (int)day1;
           }
           else {
-            dayCount = daynumber[(int)month1-1] - (int)day1;
-            while ((int)month1<(int)month2-1) {
-              dayCount = dayCount + daynumber[(int)month1];
-              month1 = month1 + 1;
+            for (int i = (int)month1; i<month2-2; i++) {
+              dayCount = daysInMonth(i, year1);
             }
-            dayCount = dayCount + (int)day2;
+            dayCount += daynumber[(int)month1-1] - day1;
+            dayCount += day2; 
           }
         }
-        else if (year1 < year2) {
-          dayCount = daynumber[(int)month1-1]-(int)day1;
-          while (year1<year2) {
-            while (month1-1 < 11) {
-              dayCount = dayCount + daynumber[(int)month1];
-              month1 = month1 + 1;
-            }
-            year1 = year1 + 1;
-            month1 = 1;
-          }
-          while ((int)month1<(int)month2-1) {
-            dayCount = dayCount + daynumber[(int)month1-1];
-            month1 = month1 + 1;
-          }
-          dayCount = dayCount + (int)day2;
-        }
-        else if (firstyear < secondyear) {
-          return dayCount;
-        }
-        return dayCount;
       }
       else if (compareDate(month1, day1, year1, month2, day2, year2)==0) {
-        return dayCount = 0;
+        dayCount = 0;
       }
       else {
-        if (year1==year2) {
-          if (month1==month2) {
+        dayCount = ((int)year1 - (int)year2 - 1) * 365;
+        if ((int)year2<(int)year1) {
+          for (int i = (int)month2; i<12; i++) {
+            dayCount = dayCount + daysInMonth(i, year2);
+          }
+          for (int i = 0; i<(int)month1-2; i++) {
+            dayCount += daysInMonth(i, year1);
+          }
+          while ((int)year2<(int)year1) {
+            if (isLeapYear(year2)) {
+              dayCount +=1;
+            }
+            year2++;
+          }
+          dayCount += daynumber[(int)month2-1] - (int)day2;
+          dayCount += day1;
+        }
+        else if ((int)year2==(int)year1) {
+          if (month2==month1) {
             dayCount = (int)day1 - (int)day2;
           }
           else {
-            dayCount = daynumber[(int)month2-1] - (int)day2;
-            while ((int)month2<(int)month1-1) {
-              dayCount = dayCount + daynumber[(int)month2];
-              month2 = month2 + 1;
+            for (int i = (int)month2; i<month1-2; i++) {
+              dayCount = daysInMonth(i, year2);
             }
-            dayCount = dayCount + (int)day1;
+            dayCount += daynumber[(int)month2-1] - day1;
+            dayCount += day1; 
           }
         }
-        else if (year2 < year1) {
-          dayCount = daynumber[(int)month2-1]-(int)day2;
-          while (year2<year1) {
-            while (month2-1 < 11) {
-              dayCount = dayCount + daynumber[(int)month2];
-              month2 = month2 + 1;
-            }
-            year2 = year2 + 1;
-            month2 = 0;
-          }
-          while ((int)month2<(int)month1-1) {
-            dayCount = dayCount + daynumber[(int)month2-1];
-            month2 = month2 + 1;
-          }
-          dayCount = dayCount + (int)day1;
-        }
-        return dayCount;
       }
+      return dayCount;
    }
 
 }
