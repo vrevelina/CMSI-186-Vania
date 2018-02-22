@@ -51,12 +51,8 @@ public class Die {
    */
    public Die( int nSides ) {
     this.sides = nSides;
-    int[] valueArray = new int[nSides];
-    for(int i=0; i<valueArray.length; i++) {
-      valueArray[i] = i+1;
-    }
     try {
-      if(this.sides<4) {
+      if(sides<4) {
         System.out.println("enter an integer bigger than 3!");
       }
     }
@@ -68,8 +64,8 @@ public class Die {
    * @return  integer value of the result of the roll, randomly selected
    */
    public int roll() {
-    int rolled = (int)((Math.random() * this.sides) + 1);
-    return rolled;
+    pips = (int)((Math.random() * this.sides) + 1);
+    return pips;
    }
 
   /**
@@ -80,6 +76,7 @@ public class Die {
    * @return the pip count of THIS die instance
    */
    public int getValue() {
+    return pips;
    }
 
   /**
@@ -87,15 +84,16 @@ public class Die {
    * @return      The new number of sides, in case anyone is looking
    * @throws      IllegalArgumentException
    */
-   public void setSides( int sides ) {
+   public void setSides( int newsides ) {
+    this.sides = newsides;
    }
 
   /**
    * Public Instance method that returns a String representation of THIS die instance
    * @return String representation of this Die
    */
-   public String toString() {
-      return "z";
+   public String toString() { 
+    return "[" + pips + "]";
    }
 
   /**
@@ -103,7 +101,7 @@ public class Die {
    * @return String representation of this Die
    */
    public static String toString( Die d ) {
-      return "";
+      return d.toString();
    }
 
   /**
@@ -111,10 +109,25 @@ public class Die {
    */
    public static void main( String[] args ) {
       System.out.println( "Hello world from the Die class..." );
-      Die d =  new Die(10);
+      Die d =  new Die(20);
       d.roll();
       System.out.println("new value= " + d.roll());
+      System.out.println("get value= " + d.getValue());
+      d.setSides(7);
+      System.out.println("setSides= " + d.sides);
+      System.out.println("toString1= " + d.toString());
+      d.roll();
+      System.out.println("toString2= " + d.toString());
 
+      Die p = new Die(15);
+      p.roll();
+      System.out.println("new value= " + p.roll());
+      System.out.println("get value= " + p.getValue());
+      p.setSides(30);
+      System.out.println("setSides= " + p.sides);
+      System.out.println("toString1= " + p.toString());
+      p.roll();
+      System.out.println("toString2= " + p.toString());
 
    }
 
