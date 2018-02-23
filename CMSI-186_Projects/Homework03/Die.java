@@ -129,6 +129,36 @@ public class Die {
       p.roll();
       System.out.println("toString2= " + p.toString());
 
+      Die m = new Die(17);
+      m.roll();
+      System.out.println("new value= " + m.roll());
+      System.out.println("get value= " + m.getValue());
+      m.setSides(21);
+      System.out.println("setSides= " + m.sides);
+      System.out.println("toString1= " + m.toString());
+      m.roll();
+      System.out.println("toString2= " + m.toString());
+
+      Die q = new Die(13);
+      q.roll();
+      System.out.println("new value= " + q.roll());
+      System.out.println("get value= " + q.getValue());
+      q.setSides(43);
+      System.out.println("setSides= " + q.sides);
+      System.out.println("toString1= " + q.toString());
+      q.roll();
+      System.out.println("toString2= " + q.toString());
+
+      Die l = new Die(9);
+      l.roll();
+      System.out.println("new value= " + l.roll());
+      System.out.println("get value= " + l.getValue());
+      l.setSides(57);
+      System.out.println("setSides= " + l.sides);
+      System.out.println("toString1= " + l.toString());
+      l.roll();
+      System.out.println("toString2= " + l.toString());
+
    }
 
 }
