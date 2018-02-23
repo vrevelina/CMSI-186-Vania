@@ -110,50 +110,60 @@ public class Die {
    public static void main( String[] args ) {
       System.out.println( "Hello world from the Die class..." );
       Die d =  new Die(20);
+      System.out.println("testing new Die with sides: 20");
       d.roll();
       System.out.println("new value= " + d.roll());
       System.out.println("get value= " + d.getValue());
       d.setSides(7);
+      System.out.println("changed sides to: 7");
       System.out.println("setSides= " + d.sides);
       System.out.println("toString1= " + d.toString());
       d.roll();
       System.out.println("toString2= " + d.toString());
 
       Die p = new Die(15);
+      System.out.println("testing new Die with sides: 15");
       p.roll();
       System.out.println("new value= " + p.roll());
       System.out.println("get value= " + p.getValue());
       p.setSides(30);
+      System.out.println("changed sides to: 30");
       System.out.println("setSides= " + p.sides);
       System.out.println("toString1= " + p.toString());
       p.roll();
       System.out.println("toString2= " + p.toString());
 
       Die m = new Die(17);
+      System.out.println("testing new Die with sides: 17");
       m.roll();
       System.out.println("new value= " + m.roll());
       System.out.println("get value= " + m.getValue());
       m.setSides(21);
+      System.out.println("changed sides to: 21");
       System.out.println("setSides= " + m.sides);
       System.out.println("toString1= " + m.toString());
       m.roll();
       System.out.println("toString2= " + m.toString());
 
       Die q = new Die(13);
+      System.out.println("testing new Die with sides: 13");
       q.roll();
       System.out.println("new value= " + q.roll());
       System.out.println("get value= " + q.getValue());
       q.setSides(43);
+      System.out.println("changed sides to: 43");
       System.out.println("setSides= " + q.sides);
       System.out.println("toString1= " + q.toString());
       q.roll();
       System.out.println("toString2= " + q.toString());
 
       Die l = new Die(9);
+      System.out.println("testing new Die with sides: 9");
       l.roll();
       System.out.println("new value= " + l.roll());
       System.out.println("get value= " + l.getValue());
       l.setSides(57);
+      System.out.println("changed sides to: 57");
       System.out.println("setSides= " + l.sides);
       System.out.println("toString1= " + l.toString());
       l.roll();
