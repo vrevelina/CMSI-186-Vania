@@ -115,8 +115,13 @@ public class DiceSet {
   /**
    * @return  tru iff this set is identical to the set passed as an argument
    */
-   public boolean isIdentical( DiceSet ds ) {
-      return true;
+   public boolean isIdentical( DiceSet ds1 ) {
+      for(int i=0; i<count;i++) {
+        if(ds[i]!=ds1[i]) {
+          return false;
+          break;
+        }
+      } return true;
    }
 
   /**
