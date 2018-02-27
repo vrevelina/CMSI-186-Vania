@@ -1,0 +1,165 @@
+Hello world from the Die class...
+testing new Die with sides: 20
+new value= 7
+get value= 7
+changed sides to: 7
+setSides= 7
+toString1= [7]
+toString2= [7]
+testing new Die with sides: 15
+new value= 2
+get value= 2
+changed sides to: 30
+setSides= 30
+toString1= [2]
+toString2= [17]
+testing new Die with sides: 17
+new value= 10
+get value= 10
+changed sides to: 21
+setSides= 21
+toString1= [10]
+toString2= [16]
+testing new Die with sides: 13
+new value= 8
+get value= 8
+changed sides to: 43
+setSides= 43
+toString1= [8]
+toString2= [11]
+testing new Die with sides: 9
+new value= 5
+get value= 5
+changed sides to: 57
+setSides= 57
+toString1= [5]
+toString2= [47]
+Welcome to DiceSet!
+string= [,0,0,0]
+string= [,9,7,5]
+value= 9
+TESTING THE DIE CLASS: TEST CONSTRUCTOR FOR INVALID NUMBERS OF SIDES:
+enter an integer bigger than 3!
+enter an integer bigger than 3!
+enter an integer bigger than 3!
+enter an integer bigger than 3!
+TESTING THE DIE CLASS: TESTS ON 4-SIDED DIE:
+   roll() test for 4 sided die: 
+   You rolled a 4
+   You rolled a 3
+   You rolled a 1
+   You rolled a 1
+   You rolled a 4
+   Current value is: [4]
+TESTING THE DIE CLASS: TESTS ON 5-SIDED DIE:
+   roll() test for 5 sided die: 
+   You rolled a 4
+   You rolled a 1
+   You rolled a 1
+   You rolled a 3
+   You rolled a 1
+   Current value is: [1]
+TESTING THE DIE CLASS: TESTS ON 6-SIDED DIE:
+   roll() test for 6 sided die: 
+   You rolled a 4
+   You rolled a 5
+   You rolled a 6
+   You rolled a 5
+   You rolled a 3
+   Current value is: [3]
+TESTING THE DIE CLASS: TESTS ON 7-SIDED DIE:
+   roll() test for 7 sided die: 
+   You rolled a 4
+   You rolled a 2
+   You rolled a 4
+   You rolled a 7
+   You rolled a 2
+   Current value is: [2]
+TESTING THE DIE CLASS: TESTS ON 8-SIDED DIE:
+   roll() test for 8 sided die: 
+   You rolled a 4
+   You rolled a 6
+   You rolled a 1
+   You rolled a 3
+   You rolled a 1
+   Current value is: [1]
+TESTING THE DIE CLASS: TESTS ON 11-SIDED DIE USING NEW SIDE COUNT:
+   Rolling with new side count -- 
+      You rolled a 4
+      You rolled a 9
+      You rolled a 8
+      You rolled a 10
+      You rolled a 6
+TESTING THE DIE CLASS: TESTS ON 17-SIDED DIE USING NEW SIDE COUNT:
+   Rolling with new side count -- 
+      You rolled a 13
+      current value is: 13
+TESTING THE DIE CLASS: TESTS ON 111-SIDED DIE USING NEW SIDE COUNT:
+   Rolling with new side count -- 
+      You rolled a 71
+      current value is: 71
+......End of Die Class Testing.....
+
+
+TESTING THE DICESET CLASS: TEST CONSTRUCTOR FOR 3 SIX-SIDED DICE:
+  DiceSet: 3 dice, six sided - ds36:
+      initialized ds36 contents             : [,0,0,0]
+      after collective roll ds36 contents   : [,2,5,4]
+      after individual roll(2) ds36 contents: [,2,3,4]
+      sum of dice values is: 9
+   Re-rolling all dice
+      after collective roll ds36 contents   : [,2,5,5]
+      after individual roll(2) ds36 contents: [,2,3,5]
+      sum of dice values is                 : 10
+   Test of getIndividual(): 
+      value of die at index 0: 2
+      value of die at index 1: 3
+      value of die at index 2: 5
+TESTING THE DICESET CLASS: TEST CONSTRUCTOR FOR 6 NINE-SIDED DICE:
+   DiceSet: 6 dice, nine sided - ds69:
+      initialized ds36 contents             : [,0,0,0,0,0,0]
+      after collective roll ds69 contents   : [,3,6,1,5,7,1]
+      after individual roll(2) ds69 contents: [,3,3,1,5,7,1]
+      sum of dice values is                 : 20
+   Re-rolling all dice
+      after collective roll ds69 contents   : [,3,9,6,9,8,8]
+      after individual roll(3) ds69 contents: [,3,9,8,9,8,8]
+      sum of dice values is                 : 45
+   Test of getIndividual(): 
+      value of die at index 0: 3
+      value of die at index 1: 9
+      value of die at index 2: 8
+      value of die at index 3: 9
+      value of die at index 4: 8
+      value of die at index 5: 8
+TESTING THE DICESET CLASS: TEST CONSTRUCTOR FOR 9 SEVENTEEN-SIDED DICE:
+   DiceSet: 9 dice, 17 sided - ds917:
+      initialized ds36 contents              : [,0,0,0,0,0,0,0,0,0]
+      after collective roll ds917 contents   : [,12,7,2,7,5,6,13,14,6]
+      after individual roll(6) ds917 contents: [,12,7,2,7,5,15,13,14,6]
+      sum of dice values is                  : 81
+   Re-rolling all dice
+      after collective roll ds917 contents   : [,13,1,12,4,1,15,11,12,2]
+      after individual roll(8) ds69 contents : [,13,1,12,4,1,15,11,16,2]
+      sum of dice values is                  : 75
+   Test of getIndividual(): 
+      value of die at index 0: 13
+      value of die at index 1: 1
+      value of die at index 2: 12
+      value of die at index 3: 4
+      value of die at index 4: 1
+      value of die at index 5: 15
+      value of die at index 6: 11
+      value of die at index 7: 16
+      value of die at index 8: 2
+TESTING THE DICESET CLASS: TEST 'isIdentical()' FOR 9 SEVENTEEN-SIDED DICE:
+   Test of isIndentical(): 
+      Test of ds917 against ds69   : true
+      Test of ds917 against itself : true
+TESTING THE DICESET CLASS: TEST 'isIdentical()' FOR NEW SET OF 9 SEVENTEEN-SIDED DICE:
+   DiceSet ds917 contents       : [,3,9,11,1,2,6,5,14,14]
+      New DiceSet ds2_917 contents : [,3,9,11,1,2,6,5,14,14]
+      Test of ds917 against ds2_917: true
+......End of DiceSet Class Testing.....
+
+

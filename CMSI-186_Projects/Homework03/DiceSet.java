@@ -35,7 +35,7 @@ public class DiceSet {
    private static int count;
    private int sides;
    private static Die[] ds = null;
-   private int[] pips = null;
+//   private int[] pips = null;    YOU DON'T NEED THIS; IT'S PART OF THE DIE CLASS AND DOESN'T BELONG HERE
 
    // public constructor:
   /**
@@ -46,10 +46,13 @@ public class DiceSet {
    * @note   parameters are checked for validity; invalid values throw "IllegalArgumentException"
    */
    public DiceSet( int count, int ksides ) {
-    Die[] ds = new Die[count];
+    // Die[] ds = new Die[count];      // THIS IS CAUSING A NULL POINTER EXCEPTION; YOU ARE DECLARING A LOCAL COPY!!
+    ds = new Die[count];
     for(int i=0; i<count; i++) {
       ds[i] = new Die(ksides);
     }
+    this.count = count;       // THESE TWO LINES WILL ENSURE THAT THE CLASS FIELDS ARE INITIALIZED PROPERLY
+    this.sides = ksides;
    }
 
   /**
@@ -109,7 +112,7 @@ public class DiceSet {
    * @return Class-wide version of the preceding instance method
    */
    public static String toString( DiceSet ds ) {
-      return "";
+      return ds.toString();       // THIS WAS NEVER FINISHED SO I ADDED IT FOR YOU
    }
 
   /**
@@ -117,9 +120,10 @@ public class DiceSet {
    */
    public boolean isIdentical( DiceSet ds1 ) {
       for(int i=0; i<count;i++) {
-        if(ds[i]!=ds1[i]) {
+//        if(ds[i]!=ds1[i]) {  THIS IS WRONG; DS1 IS A DICE SET, NOT AN ARRAY.  SEE NEXT LINE
+        if(ds[i]!=ds1.ds[i]) {
           return false;
-          break;
+//          break;  THIS IS AN UNREACHABLE STATEMENT; YOU ARE RETURNING IN THE LINE ABOVE IT
         }
       } return true;
    }
@@ -130,9 +134,10 @@ public class DiceSet {
    public static void main( String[] args ) {
       System.out.println("Welcome to DiceSet!");
       DiceSet ds = new DiceSet(3,10);
-      ds.aroll();
-      System.out.println("value= " + ds.getIndividual(1));
       System.out.println("string= " + ds.toString());
+      ds.aroll();
+      System.out.println("string= " + ds.toString());
+      System.out.println("value= " + ds.getIndividual(1));
 
    }
 }
