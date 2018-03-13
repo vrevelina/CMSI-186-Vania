@@ -2,8 +2,8 @@
  *  File name     :  ClockSolver.java
  *  Purpose       :  The main program for the ClockSolver class
  *  @see
- *  @author       :  B.J. Johnson
- *  Date written  :  2017-02-28
+ *  @author       :  Vania Revelina 
+ *  Date written  :  2018-03-01
  *  Description   :  This class provides a bunch of methods which may be useful for the ClockSolver class
  *                   for Homework 4, part 1.  Includes the following:
   *
@@ -16,6 +16,7 @@
  *            Rev      Date     Modified by:  Reason for change/modification
  *           -----  ----------  ------------  -----------------------------------------------------------
  *  @version 1.0.0  2017-02-28  B.J. Johnson  Initial writing and release
+ *  @version 2.0.0  2018-03-01  Vania R.      Modified ClockSolver.java to be a working program
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class ClockSolver {
