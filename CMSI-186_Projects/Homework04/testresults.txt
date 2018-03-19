@@ -1,0 +1,218 @@
+.
+.
+successful compilation
+.
+
+CLOCK CLASS TESTER PROGRAM
+--------------------------
+
+  Creating a new clock:
+Found target angle of 0.0 at time: 0.0 hours, 0.0 minutes, 0.0 seconds
+    New clock created: Found target angle of 0.0 at time: 0.0 hours, 0.0 minutes, 0.0 seconds
+    Testing validateAngleArg()....
+      sending '  0 degrees', expecting double value   0.0 - Exception thrown: java.lang.NumberFormatException: enter a positive non-zero real angle
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+   Sorry you must enter at least one argument
+   Usage: java ClockSolver <angle> [timeSlice] <epsilon_value>
+   Please try again...........
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+throws exception with java ClockSolver -1.0
+   Exception in thread "main" java.lang.NumberFormatException: enter a positive non-zero real angle
+        at Clock.validateAngleArg(Clock.java:63)
+        at ClockSolver.handleInitialArguments(ClockSolver.java:66)
+        at ClockSolver.main(ClockSolver.java:85)
+
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+Sorry, you must enter a valid time slice
+Please try again...
+
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+Sorry, you must enter a valid time slice
+Please try again...
+
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 360.0 with a time slice of 60.0...
+
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+Sorry, you must enter a valid time slice
+Please try again...
+
+
+throws exception with java ClockSolver abc
+   Exception in thread "main" java.lang.NumberFormatException: For input string: "abc"
+        at sun.misc.FloatingDecimal.readJavaFormatString(Unknown Source)
+        at sun.misc.FloatingDecimal.parseDouble(Unknown Source)
+        at java.lang.Double.parseDouble(Unknown Source)
+        at Clock.validateAngleArg(Clock.java:59)
+        at ClockSolver.handleInitialArguments(ClockSolver.java:66)
+        at ClockSolver.main(ClockSolver.java:85)
+
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 30.0 with a time slice of 60.0...
+
+Found target angle of 30.0 at time: 1.0 hours, 0.0 minutes, 0.0 seconds
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 30.0 with a time slice of 10.0...
+
+Found target angle of 30.0 at time: 1.0 hours, 0.0 minutes, 0.0 seconds
+Found target angle of 30.0 at time: 3.0 hours, 21.0 minutes, 50.0 seconds
+Found target angle of 30.0 at time: 5.0 hours, 21.0 minutes, 50.0 seconds
+Found target angle of 30.0 at time: 7.0 hours, 43.0 minutes, 40.0 seconds
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 30.0 with a time slice of 1.0...
+
+Found target angle of 30.0 at time: 0.0 hours, 5.0 minutes, 27.0 seconds
+Found target angle of 30.0 at time: 0.0 hours, 38.0 minutes, 11.0 seconds
+Found target angle of 30.0 at time: 1.0 hours, 0.0 minutes, 0.0 seconds
+Found target angle of 30.0 at time: 1.0 hours, 10.0 minutes, 55.0 seconds
+Found target angle of 30.0 at time: 1.0 hours, 32.0 minutes, 44.0 seconds
+Found target angle of 30.0 at time: 1.0 hours, 43.0 minutes, 39.0 seconds
+Found target angle of 30.0 at time: 2.0 hours, 5.0 minutes, 28.0 seconds
+Found target angle of 30.0 at time: 2.0 hours, 16.0 minutes, 22.0 seconds
+Found target angle of 30.0 at time: 2.0 hours, 38.0 minutes, 12.0 seconds
+Found target angle of 30.0 at time: 2.0 hours, 49.0 minutes, 6.0 seconds
+Found target angle of 30.0 at time: 3.0 hours, 10.0 minutes, 55.0 seconds
+Found target angle of 30.0 at time: 3.0 hours, 21.0 minutes, 50.0 seconds
+Found target angle of 30.0 at time: 3.0 hours, 43.0 minutes, 39.0 seconds
+Found target angle of 30.0 at time: 3.0 hours, 54.0 minutes, 34.0 seconds
+Found target angle of 30.0 at time: 4.0 hours, 16.0 minutes, 23.0 seconds
+Found target angle of 30.0 at time: 4.0 hours, 27.0 minutes, 17.0 seconds
+Found target angle of 30.0 at time: 4.0 hours, 27.0 minutes, 18.0 seconds
+Found target angle of 30.0 at time: 4.0 hours, 49.0 minutes, 7.0 seconds
+Found target angle of 30.0 at time: 5.0 hours, 21.0 minutes, 50.0 seconds
+Found target angle of 30.0 at time: 5.0 hours, 21.0 minutes, 51.0 seconds
+Found target angle of 30.0 at time: 5.0 hours, 54.0 minutes, 34.0 seconds
+Found target angle of 30.0 at time: 6.0 hours, 5.0 minutes, 29.0 seconds
+Found target angle of 30.0 at time: 6.0 hours, 38.0 minutes, 13.0 seconds
+Found target angle of 30.0 at time: 7.0 hours, 0.0 minutes, 2.0 seconds
+Found target angle of 30.0 at time: 7.0 hours, 10.0 minutes, 56.0 seconds
+Found target angle of 30.0 at time: 7.0 hours, 32.0 minutes, 46.0 seconds
+Found target angle of 30.0 at time: 7.0 hours, 43.0 minutes, 40.0 seconds
+Found target angle of 30.0 at time: 8.0 hours, 5.0 minutes, 29.0 seconds
+Found target angle of 30.0 at time: 8.0 hours, 16.0 minutes, 24.0 seconds
+Found target angle of 30.0 at time: 8.0 hours, 38.0 minutes, 13.0 seconds
+Found target angle of 30.0 at time: 8.0 hours, 49.0 minutes, 8.0 seconds
+Found target angle of 30.0 at time: 9.0 hours, 10.0 minutes, 57.0 seconds
+Found target angle of 30.0 at time: 9.0 hours, 21.0 minutes, 51.0 seconds
+Found target angle of 30.0 at time: 9.0 hours, 21.0 minutes, 52.0 seconds
+Found target angle of 30.0 at time: 9.0 hours, 43.0 minutes, 41.0 seconds
+Found target angle of 30.0 at time: 9.0 hours, 54.0 minutes, 35.0 seconds
+Found target angle of 30.0 at time: 10.0 hours, 16.0 minutes, 24.0 seconds
+Found target angle of 30.0 at time: 10.0 hours, 16.0 minutes, 25.0 seconds
+Found target angle of 30.0 at time: 10.0 hours, 27.0 minutes, 19.0 seconds
+Found target angle of 30.0 at time: 10.0 hours, 49.0 minutes, 8.0 seconds
+Found target angle of 30.0 at time: 11.0 hours, 21.0 minutes, 52.0 seconds
+Found target angle of 30.0 at time: 11.0 hours, 54.0 minutes, 36.0 seconds
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 75.23 with a time slice of 60.0...
+
+Found target angle of 75.23 at time: 8.0 hours, 30.0 minutes, 0.0 seconds
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 75.23 with a time slice of 7.0...
+
+Found target angle of 75.23 at time: 2.0 hours, 57.0 minutes, 20.0 seconds
+Found target angle of 75.23 at time: 3.0 hours, 2.0 minutes, 42.0 seconds
+Found target angle of 75.23 at time: 4.0 hours, 8.0 minutes, 9.0 seconds
+Found target angle of 75.23 at time: 9.0 hours, 2.0 minutes, 44.0 seconds
+Found target angle of 75.23 at time: 10.0 hours, 8.0 minutes, 11.0 seconds
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 75.23 with a time slice of 1.3...
+
+Found target angle of 75.23 at time: 0.0 hours, 13.0 minutes, 40.29999999999234 seconds
+Found target angle of 75.23 at time: 0.0 hours, 46.0 minutes, 24.60000000005266 seconds
+Found target angle of 75.23 at time: 1.0 hours, 51.0 minutes, 51.90000000060172 seconds
+Found target angle of 75.23 at time: 2.0 hours, 24.0 minutes, 36.20000000053733 seconds
+Found target angle of 75.23 at time: 2.0 hours, 57.0 minutes, 19.19999999943866 seconds
+Found target angle of 75.23 at time: 3.0 hours, 2.0 minutes, 41.599999999258216 seconds
+Found target angle of 75.23 at time: 3.0 hours, 35.0 minutes, 25.89999999815882 seconds
+Found target angle of 75.23 at time: 4.0 hours, 40.0 minutes, 53.19999999596257 seconds
+Found target angle of 75.23 at time: 5.0 hours, 13.0 minutes, 37.499999994863174 seconds
+Found target angle of 75.23 at time: 5.0 hours, 46.0 minutes, 20.499999993764504 seconds
+Found target angle of 75.23 at time: 6.0 hours, 13.0 minutes, 42.39999999284555 seconds
+Found target angle of 75.23 at time: 7.0 hours, 19.0 minutes, 9.699999990647484 seconds
+Found target angle of 75.23 at time: 7.0 hours, 51.0 minutes, 53.99999998954809 seconds
+Found target angle of 75.23 at time: 8.0 hours, 24.0 minutes, 36.99999998844942 seconds
+Found target angle of 75.23 at time: 8.0 hours, 57.0 minutes, 21.29999998735002 seconds
+Found target angle of 75.23 at time: 9.0 hours, 2.0 minutes, 43.699999987169576 seconds
+Found target angle of 75.23 at time: 10.0 hours, 8.0 minutes, 10.999999995387043 seconds
+Found target angle of 75.23 at time: 10.0 hours, 40.0 minutes, 55.29999999978463 seconds
+Found target angle of 75.23 at time: 11.0 hours, 13.0 minutes, 38.30000000417931 seconds
+Found target angle of 75.23 at time: 11.0 hours, 46.0 minutes, 22.6000000085769 seconds
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 90.0 with a time slice of 2.5...
+
+Found target angle of 90.0 at time: 2.0 hours, 27.0 minutes, 17.5 seconds
+Found target angle of 90.0 at time: 3.0 hours, 32.0 minutes, 45.0 seconds
+Found target angle of 90.0 at time: 4.0 hours, 38.0 minutes, 12.5 seconds
+Found target angle of 90.0 at time: 5.0 hours, 43.0 minutes, 40.0 seconds
+Found target angle of 90.0 at time: 6.0 hours, 49.0 minutes, 7.5 seconds
+Found target angle of 90.0 at time: 7.0 hours, 54.0 minutes, 35.0 seconds
+Found target angle of 90.0 at time: 9.0 hours, 0.0 minutes, 2.5 seconds
+Found target angle of 90.0 at time: 10.0 hours, 5.0 minutes, 30.0 seconds
+Found target angle of 90.0 at time: 11.0 hours, 10.0 minutes, 57.5 seconds
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 180.0 with a time slice of 1.8...
+
+
+
+      Hello world! Welcome to the ClockSolver program!!
+
+
+  looking for target angle of 90.0 with a time slice of 1800.0...
+
