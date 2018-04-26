@@ -38,7 +38,6 @@ public class DynamicChangeMaker {
    *  note that there is no return false, because of throwing the exception
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   public static boolean handleInitialArguments ( String args[] ) {
-    System.out.println( "\n    Hello world! Welcome to the DynamicChangeMaker program!!\n\n" );
     if( 0 == args.length ) {
   	  System.out.println( "    Sorry, you must enter 2 arguments \n" +
   		                "    Usage: java DynamicChangeMaker <denominations> [target] \n" +
