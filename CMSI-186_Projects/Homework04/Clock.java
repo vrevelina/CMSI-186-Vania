@@ -57,7 +57,7 @@ public class Clock {
    */
    public static double validateAngleArg( String argValue ) throws NumberFormatException {
     targetAngle = Double.parseDouble(argValue);
-      if(targetAngle > 360) {
+      if(targetAngle >= 360) {
         throw new NumberFormatException("enter an angle that is less than 360 degrees");
       } else if(targetAngle <= 0) {
         throw new NumberFormatException("enter a positive non-zero real angle");
